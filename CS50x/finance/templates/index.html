@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+    {% endblock %}
+
+    {% block main %}
+
+    <form action="/" method="post">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-center">Select Buy/Sell</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+            {% if data != 0 %}
+            <tr>
+                <td class="text-start"> {{ data.symbol }}</td>
+                <td class="text-start"> {{ data.companyname }}</td>
+                <td class="text-end">{{ data.totalshares }}</td>
+                <td class="text-center"><input class="form-control mx-auto w-25" name={{ "shares" + data.symbol}} placeholder="Shares" type="number"><div class="container mx-auto">
+                        <button class="btn btn-primary m-1 mx-auto" name="buy" type="submit">Buy</button>
+                </div></td>
+
+                <td class="text-end"> {{ data.price | usd }}</td>
+                <td class="text-end">{{ (data.totalshares * data.price) | usd }}</td>
+
+                    {% endif%}
+                    {% endfor %}
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class=" fw-bold text-end" colspan="4">Cash</td>
+                    <td class=" w-bold text-end"> {{ cash | usd }} </td>
+                </tr>
+                <tr>
+                    <td class=" fw-bold text-end" colspan="4">TOTAL</td>
+                <td class=" w-bold text-end"> {{ totalCash | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</form>
+    {% endblock %}

@@ -1,0 +1,35 @@
+a:hover {
+    text-decoration: underline;
+  }
+
+.nav-link:hover{
+    color: green
+}
+
+.footer-link:hover {
+    color: white
+}
+
+.bg-custom {
+    background: #333333
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @font-face {
+    font-family: Roboto;
+    src: "/resources/Roboto-Medium.ttf";
+  }
+
+
+  .customFont{
+    font-family: Roboto;
+}
+
+#copyright{
+    font-family: "Times New Roman", Times, serif;
+}

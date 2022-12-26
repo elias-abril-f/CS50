@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>CS50 Week 8 Webpage</title>
+    </head>
+    <body class="customFont">
+        <header>
+            <!-- Navigation bar -->
+            <nav class="navbar navbar-expand-lg sticky-top bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/index.html"><img src="/resources/icon.png" alt="CustomBoard Logo" width=30 height=30></a>
+                    <div class="navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-link link-dark active" href="/index.html">Home</a>
+                        <a class="nav-link link-dark" href="/app.html">App</a>
+                        <a class="nav-link link-dark" href="/contact.html">Contact Us</a>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="position-relative container-fluid">
+            <h2 class="text-center mt-3"> Download NOW!</h2>
+            <img src="/resources/phonefront2.png" alt="item1" class="w-25 h-auto mx-auto d-block">
+            <button type="button" id="downloadButton" class="btn m-4 btn-success mx-auto d-block"> Download</button>
+        </div>
+          <!-- Footer -->
+          <footer>
+            <nav class="navbar navbar-expand-lg sticky-bottom bg-custom w-auto">
+                <div class="container-fluid">
+                    <div class="navbar-collapse d-flex justify-content-left" id="navbarNavMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link link-light footer-link" href="/PrivacyPolicy.html">Privacy Policy</a>
+                            <a class="nav-link link-light footer-link" >About Us</a>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse d-flex justify-content-center" id="navbarNavRMarkup">
+                        <div>
+                            <a class="nav-link disabled" id="copyright"> Copyright © 2022. The Custom Board, UK. All Rights Reserved.</a>
+                        </div>
+                    </div>
+                </div>
+                </nav>
+        </footer>
+        <script>
+            document.getElementById("downloadButton").addEventListener("click", download);
+
+            function download(fileUrl, fileName) {
+                var a = document.createElement("a");
+                a.href = "/resources/test.txt";
+                a.setAttribute("download", "test.txt");
+                a.click();
+              }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because this algorithm takes different amounts of time depending on wether the numbers in the list are sorted, in reverse or random.
+If it were using merge or selection sort it wouln't matter the order of the numbers as it would always take roughly the same amount of time. It's also
+by far the worst at sorting lists of numbers sorted in reverse.
+
+sort2 uses: Merge sort
+
+How do you know?: The order of the numbers is irrelevant, as it always take aproximately the same amount of time to sort them. This is by far the
+fastest to sort numbers given in reverse order.
+
+sort3 uses: Selection sort
+
+How do you know?: The order of the numbers is irrelevant, as it always takes aproximately the same amount of time to sort them. As its the slower of the
+two programs that use an algorithm that doesn't care about the order of the numbers this must be the one which uses linear search.
